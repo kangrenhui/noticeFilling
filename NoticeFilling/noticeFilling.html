@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css" />
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+      		<script src="lib/html5shiv/html5shiv.min.js"></script>
+      		<script src="lib/respond/respond.min.js"></script>
+    		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<title>简易注销 公告填报</title>
+	</head>
+
+	<body>
+		<!--
+        	作者：kangrenhui@126.com
+        	时间：2017-03-02
+        	描述：头部区域
+        -->
+		<header id="header">
+			<div id="topbar">
+				<div class="navbar navbar-apps navbar-fixed-top">
+						<span class="glyphicon glyphicon-menu-left" id="back_btn"></span>
+
+						<span class="top_title">简易注销公告填报</span>
+				</div>
+			</div>
+		</header>
+		<!--
+        	作者：kangrenhui@126.com
+        	时间：2017-03-02
+        	描述：广告轮播
+        -->
+
+		<section id="filing">
+			<div class="container-fluid">
+				<div class="row first">
+					公告期为45个自然日，公告开始时间是点击"保存并公示的系统时间！
+				</div>
+			
+				<div class="row">
+					<div class="col-xs-4">
+						企业名称
+					</div>
+					<div class="col-xs-8">
+						<span id="entName"></span>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-4">
+						统一社会信用代码/注册号
+					</div>
+					<div class="col-xs-8">
+						<span id="regNo"></span>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-4">
+						登记机关
+					</div>
+					<div class="col-xs-8">
+						<span id="uniScid"></span>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-4">
+						全体投资人承诺书
+					</div>
+					<div class="col-xs-8" style="text-align: center;">
+						<form  id="form" enctype="multipart/form-data" method="post" class="upload_btn">
+							<input name="files" id="files" type="file" accept="image/*;capture=camera"/>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer id="noticeFilling-footer">
+			<div class="container-fluid">
+				<button type="button" class="btn btn-info" id="confitm_btn">保存</button>
+				<button type="button" class="btn btn-info" id="confitm_btn">保存并公式</button>
+			</div>
+			
+		</footer>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="lib/jquery/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="lib/bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript" src="lib/jquery/jquery.form.min.js" ></script>
+		<script type="text/javascript" src="js/service.js" ></script>
+		
+		<script>
+			$(document).ready(function(){
+				var noticeH = $(window).width() - 60 - 60;
+				$(".menu_right").width(noticeH);
+				
+				
+			})
+			
+			$("#back_btn").click(function() {
+				window.history.back(-1);
+			})
+			
+			$("#confitm_btn").click(function() {
+
+    				//your validation
+				uploadImg();
+			})
+			
+			getEtpsInfo();
+		</script>
+
+	</body>
+
+</html>

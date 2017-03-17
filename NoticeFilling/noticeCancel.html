@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css" />
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+      		<script src="lib/html5shiv/html5shiv.min.js"></script>
+      		<script src="lib/respond/respond.min.js"></script>
+    		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<title>简易注销 公告填报</title>
+	</head>
+
+	<body>
+		<!--
+        	作者：kangrenhui@126.com
+        	时间：2017-03-02
+        	描述：头部区域
+        -->
+		<header id="header">
+			<div id="topbar">
+				<div class="navbar navbar-apps navbar-fixed-top">
+						<span class="glyphicon glyphicon-menu-left" id="back_btn"></span>
+
+						<span class="top_title">简易注销公告查看</span>
+				</div>
+			</div>
+		</header>
+		<!--
+        	作者：kangrenhui@126.com
+        	时间：2017-03-02
+        	描述：广告轮播
+        -->
+
+		<section id="noticeCancel">
+			<div class="container-fluid">
+				<div class="row first">
+					企业只有一次机会申请简易注销公告！如选择撤销简易注销公告，将不能再次进行简易注销公告,申请办理简易注销登记手续
+				</div>
+
+				<div class="row">
+					<div class="col-xs-4">
+						企业名称
+					</div>
+					<div class="col-xs-8">
+						<span id="entName">定州某某企业有限公司</span>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-4">
+						统一社会信用代码/注册号
+					</div>
+					<div class="col-xs-8">
+						<span id="regNo">130303039939399</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<footer id="noticeCancel-footer">
+			<div class="container-fluid">
+				<button type="button" class="btn btn-danger" id="confitm_btn">撤销</button>
+			</div>
+		</footer>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="lib/jquery/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="lib/bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/service.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				var noticeH = $(window).width() - 60 - 60;
+				$(".menu_right").width(noticeH);
+
+				//登陆
+				$.ajax({
+					url: loginUrl,
+					dataType: "text",
+					data: { LoginName: "河北省金帝贸易有限公司", Password: "111111", UserType: "1" },
+					type: "post",
+					success: function(data) {
+						fillingData(data);
+					},
+					error: function(e) {
+						console.log(e);
+					}
+				});
+			})
+
+			$("#back_btn").click(function() {
+				window.history.back(-1);
+			})
+		</script>
+
+	</body>
+
+</html>

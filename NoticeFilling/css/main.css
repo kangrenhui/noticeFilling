@@ -1,0 +1,405 @@
+/**
+ * 样式
+ */
+.btn-register {
+	color: white;
+	background-color: darkred;
+	border-color: #ccc;
+}
+
+.btn-register:focus,
+.btn-register.focus {
+	color: #333;
+	background-color: #e6e6e6;
+	border-color: #8c8c8c;
+}
+
+.btn-register:hover {
+	color: #333;
+	background-color: #e6e6e6;
+	border-color: #adadad;
+}
+
+.btn-register:active,
+.btn-register.active,
+.open> .dropdown-toggle.btn-register {
+	color: #333;
+	background-color: #e6e6e6;
+	border-color: #adadad;
+}
+
+.btn-register:active:hover,
+.btn-register.active:hover,
+.open> .dropdown-toggle.btn-register:hover,
+.btn-register:active:focus,
+.btn-register.active:focus,
+.open> .dropdown-toggle.btn-register:focus,
+.btn-register:active.focus,
+.btn-register.active.focus,
+.open> .dropdown-toggle.btn-register.focus {
+	color: #333;
+	background-color: #d4d4d4;
+	border-color: #8c8c8c;
+}
+
+.btn-register:active,
+.btn-register.active,
+.open> .dropdown-toggle.btn-register {
+	background-image: none;
+}
+
+.btn-register.disabled:hover,
+.btn-register[disabled]:hover,
+fieldset[disabled] .btn-register:hover,
+.btn-register.disabled:focus,
+.btn-register[disabled]:focus,
+fieldset[disabled] .btn-register:focus,
+.btn-register.disabled.focus,
+.btn-register[disabled].focus,
+fieldset[disabled] .btn-register.focus {
+	background-color: #fff;
+	border-color: #ccc;
+}
+
+.btn-register .badge {
+	color: #fff;
+	background-color: #333;
+}
+
+/**
+ * popwindows
+ */
+.pop-window {
+	position: absolute;
+	background-color: red;
+	width: 200px;
+	height: 200px;
+	z-index: 9999;
+}
+
+/**
+ * 导航栏
+ */
+.navbar-apps {
+  background-color: rgb(54,182,234);
+  border-color: #e7e7e7;
+}
+.navbar-apps .navbar-brand {
+  color: #777;
+}
+.navbar-apps .navbar-brand:hover,
+.navbar-apps .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+.navbar-apps .navbar-text {
+  color: #777;
+}
+.navbar-apps .navbar-nav > li > a {
+  color: #777;
+}
+.navbar-apps .navbar-nav > li > a:hover,
+.navbar-apps .navbar-nav > li > a:focus {
+  color: #333;
+  background-color: transparent;
+}
+.navbar-apps .navbar-nav > .active > a,
+.navbar-apps .navbar-nav > .active > a:hover,
+.navbar-apps .navbar-nav > .active > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+.navbar-apps .navbar-nav > .disabled > a,
+.navbar-apps .navbar-nav > .disabled > a:hover,
+.navbar-apps .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+.navbar-apps .navbar-toggle {
+  border-color: #ddd;
+}
+.navbar-apps .navbar-toggle:hover,
+.navbar-apps .navbar-toggle:focus {
+  background-color: #ddd;
+}
+.navbar-apps .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+.navbar-apps .navbar-collapse,
+.navbar-apps .navbar-form {
+  border-color: #e7e7e7;
+}
+.navbar-apps .navbar-nav > .open > a,
+.navbar-apps .navbar-nav > .open > a:hover,
+.navbar-apps .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+
+
+/**
+ * 自定义公共级别的样式
+ * 约定：
+ * 1 样式都通过ID去限定，这样解决冲突的问题。
+ * 2 尽可能多使用直接子代选择器，而非间接指代
+ */
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+	background-color: rgb(243,243,243);
+	min-height: 100vh;
+}
+
+/**
+ * -----------------------------------------------index------------------------------------------------
+ */
+
+/**
+ * header
+ */
+#topbar {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 17px;
+	color: white;
+}
+
+
+#topbar .glyphicon-menu-left{
+	position: absolute;
+	left: 20px;
+	top: 14px;
+	font-size: 20px;
+	color: white;
+}
+
+#topbar .glyphicon-menu-left:hover{
+	cursor: pointer;
+}
+
+
+
+
+/**
+ * footer
+ */
+#menu-footer > div{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+
+#menu-footer > div > button{
+	width: 90%;
+	height: 40px;
+}
+
+#notice .container-fluid > div > div{
+	padding: 20px 30px;
+	height: 100px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+#notice .readme{
+	max-width: 450px;
+	margin: 0 auto;
+}
+
+/**
+ * -----------------------------------------------menu------------------------------------------------
+ */
+
+
+
+#menu .menu_left{
+	height: 60px;
+	width: 60px;
+	text-align: center;
+	line-height: 60px;
+	float: left;
+}
+
+#menu > div{
+	padding: 20px 30px;
+}
+
+#menu > div > div + div {
+	margin-top: 20px;
+}
+
+.menu_1{
+	background-color: rgb(255,181,102);
+}
+.menu_2{
+	background-color: rgb(54,182,234);
+}
+.menu_3{
+	background-color: rgb(244,103,103);
+}
+
+#menu .menu_right{
+	float: left;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 16px;
+	background: white;
+	padding-right: 50px;
+}
+
+#noticeFiling-btn:hover,#viewNotice-btn:hover,#noticeCancel_btn:hover{
+	cursor: pointer;
+}
+
+
+
+/**
+ * -----------------------------------------------noticefiling------------------------------------------------
+ */
+#filing > div > .row {
+	vertical-align: auto;
+	max-height: 200px;
+	min-height: 60px;
+	font-size: 15px;
+	padding: 20px 0;
+	color: rgb(102,102,102);
+	border-bottom: 1px solid rgb(204,204,204);
+}
+
+#filing > .container-fluid > .first{
+	color: rgb(249,71,71);
+	line-height: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+}
+
+#filing .img-commit{
+	position: absolute;
+	right: 20px;
+	top: 13%;
+}
+
+#filing .investor-text{
+	width: 90%;
+	word-break: normal;
+	display: block;
+	color: rgb(204,204,204);
+	font-size: 14px;
+}
+
+#filing .upload_btn{
+	display: block;
+	max-width: 272px;
+	margin: 0 auto;
+}
+
+#noticeFilling-footer > div{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	min-height: 150px;
+	text-align: center;
+}
+
+#noticeFilling-footer> div > button{
+	margin-top: 20px;
+	width: 90%;
+	height: 40px;
+}
+
+/**
+ * -----------------------------------------------viewnotice------------------------------------------------
+ */
+#viewNotice > div > .row , #dissentInfo .row {
+	vertical-align: auto;
+	max-height: 200px;
+	min-height: 60px;
+	font-size: 15px;
+	padding: 20px 0;
+	color: rgb(102,102,102);
+	border-bottom: 1px solid rgb(204,204,204);
+}
+
+#viewNotice > .container-fluid > .first{
+	color: rgb(249,71,71);
+	line-height: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+}
+
+#viewNotice .investor-text{
+	width: 95%;
+	word-break: normal;
+	display: block;
+	color: rgb(204,204,204);
+	font-size: 14px;
+}
+
+#dissentInfo > div > .first-title{
+	background: rgb(238,238,238);
+	min-height: 30px;
+	line-height: 30px;
+	padding: 0;
+	padding-left: 15px;
+	color: rgb(102,102,102);
+}
+
+
+/**
+ * -----------------------------------------------noticeCancel------------------------------------------------
+ */
+#noticeCancel > div > .row , #dissentInfo .row {
+	vertical-align: auto;
+	max-height: 200px;
+	min-height: 60px;
+	font-size: 15px;
+	padding: 20px 0;
+	color: rgb(102,102,102);
+	border-bottom: 1px solid rgb(204,204,204);
+}
+
+#noticeCancel > .container-fluid > .first{
+	color: rgb(249,71,71);
+	line-height: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+}
+
+#noticeCancel .investor-text{
+	width: 95%;
+	word-break: normal;
+	display: block;
+	color: rgb(204,204,204);
+	font-size: 14px;
+}
+
+#noticeCancel > div > .first-title{
+	background: rgb(238,238,238);
+	min-height: 30px;
+	line-height: 30px;
+	padding: 0;
+	padding-left: 15px;
+	color: rgb(102,102,102);
+}
+
+#noticeCancel-footer > div > button{
+	width: 90%;
+	height: 40px;
+}
+
+#noticeCancel-footer > div{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}

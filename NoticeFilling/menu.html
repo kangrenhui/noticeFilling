@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css" />
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+      		<script src="lib/html5shiv/html5shiv.min.js"></script>
+      		<script src="lib/respond/respond.min.js"></script>
+    		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<title>简易注销 公告填报</title>		
+	</head>
+
+	<body>
+		<!--
+        	作者：kangrenhui@126.com
+        	时间：2017-03-02
+        	描述：头部区域
+        -->
+		<header id="header">
+			<div id="topbar">
+				<div class="navbar navbar-apps navbar-fixed-top">
+						<span class="glyphicon glyphicon-menu-left" id="back_btn"></span>
+
+						<span class="top_title">企业名称</span>
+				</div>
+			</div>
+		</header>
+		<!--
+        	作者：kangrenhui@126.com
+        	时间：2017-03-02
+        	描述：广告轮播
+        -->
+		
+
+		<section id="menu">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12" id="noticeFiling-btn">
+						<div class="menu_left menu_1">
+							<img src="img/jy_tb.png" height="25px" width="25px"/>							
+						</div>
+						<div class="menu_right">
+							简易注销公告填报
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-xs-12" id="viewNotice-btn">
+						<div class="menu_left menu_2">
+							<img src="img/jy_ck.png" height="25px" width="25px"/>							
+						</div>
+						<div class="menu_right">
+							简易注销公告查看
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-xs-12" id="noticeCancel_btn">
+						<div class="menu_left menu_3">
+							<img src="img/jy_cx.png" height="25px" width="25px"/>							
+						</div>
+						<div class="menu_right">
+							简易注销公告撤销
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			
+		</footer>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="lib/jquery/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="lib/bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/service.js" ></script>
+
+		<script>
+			$(document).ready(function(){
+				var noticeH = $(window).width() - 60 - 60 - 50;		
+				$(".menu_right").width(noticeH);
+			})
+			
+			$("#back_btn").click(function(){
+				window.history.back(-1);
+			})
+			$("#noticeFiling-btn").click(function(){
+				window.location.href="noticeFilling.html"; 
+			})
+			$("#viewNotice-btn").click(function(){
+				window.location.href="viewNotice.html"; 
+			})
+			$("#noticeCancel_btn").click(function(){
+				window.location.href="noticeCancel.html"; 
+			})	
+			
+			
+		</script>
+
+	</body>
+
+</html>
